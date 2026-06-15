@@ -61,10 +61,10 @@ a{text-decoration:none;color:inherit}
 .plan-price{text-align:right}
 .plan-price strong{font-size:1.15rem;font-weight:900;color:var(--primary);display:block}
 .plan-price span{font-size:.72rem;color:#6b7280}
-.hero-saving{margin-top:14px;background:linear-gradient(90deg,#fff8e6,#fff3d6);border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
-.hs-label{font-size:.78rem;color:#6b7280}
-.hs-amount{font-size:1.5rem;font-weight:900;color:var(--accent)}
-.hs-note{font-size:.7rem;color:#6b7280}
+.hero-saving{margin-top:14px;background:linear-gradient(90deg,#c44a00,var(--accent));border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 16px rgba(255,107,53,.45)}
+.hs-label{font-size:.78rem;color:rgba(255,255,255,.88);font-weight:600}
+.hs-amount{font-size:2.4rem;font-weight:900;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.22);line-height:1.1}
+.hs-note{font-size:.7rem;color:rgba(255,255,255,.75)}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}}
 @media(max-width:480px){.hero{min-height:auto}.hero-inner{padding:56px 16px 48px}}
 
@@ -157,8 +157,8 @@ a{text-decoration:none;color:inherit}
 .story-card{border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.1);background:#fff}
 .story-photo{width:100%;height:200px;object-fit:cover}
 .story-body{padding:20px 22px}
-.story-saving{font-size:1.3rem;font-weight:900;color:var(--accent);margin-bottom:8px}
-.story-saving span{font-size:.82rem;color:#6b7280;font-weight:400}
+.story-saving{font-size:1.55rem;font-weight:900;color:#fff;background:linear-gradient(90deg,#c44a00,var(--accent));display:inline-block;padding:7px 18px;border-radius:10px;margin-bottom:14px;box-shadow:0 3px 12px rgba(255,107,53,.38)}
+.story-saving span{font-size:.78rem;color:rgba(255,255,255,.82);font-weight:400}
 .story-text{font-size:.86rem;color:#4b5563;line-height:1.75;margin-bottom:10px;font-style:italic}
 .story-profile{font-size:.76rem;color:#9ca3af}
 .story-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:12px}
@@ -190,6 +190,19 @@ a{text-decoration:none;color:inherit}
 .site-footer{background:var(--dark);color:#9ca3af;padding:32px 24px;text-align:center;font-size:.85rem;line-height:1.9}
 .site-footer a{color:#9ca3af}
 .site-footer a:hover{color:#d1d5db}
+
+/* ── Carrier column colors ── */
+.comp-table .th-ymobile{background:#d43f00}
+.comp-table .th-uq{background:#006fba}
+.comp-table .th-biglobe{background:#005bac}
+.comp-table .th-rakuten{background:#bf0000}
+/* Section backgrounds */
+.features-section{background:var(--gray)}
+.compare-section{background:#edf7ff}
+/* RC savings highlight */
+.rc-saving{background:linear-gradient(90deg,#c44a00,var(--accent));color:#fff;border-radius:8px;padding:8px 12px;font-size:1rem;font-weight:900;text-align:center;margin-top:10px;box-shadow:0 2px 8px rgba(255,107,53,.32);letter-spacing:.02em}
+/* Carrier label sub */
+.th-carrier-sub{font-size:.7rem;font-weight:400;opacity:.82;display:block;margin-top:2px}
 </style>
 </head>
 <body>
@@ -243,11 +256,13 @@ a{text-decoration:none;color:inherit}
         </div>
         <div class="hero-saving">
           <div>
-            <div class="hs-label">2年間の節約額</div>
+            <div class="hs-label">2年間で最大節約</div>
             <div class="hs-amount">¥83,520</div>
+            <div class="hs-label" style="margin-top:2px;font-size:.72rem">月々 ¥3,480 お得！</div>
           </div>
-          <div>
-            <div class="hs-note">現在の大手キャリア<br>（月額約9,000円）との比較</div>
+          <div style="text-align:right">
+            <div style="font-size:2.2rem;line-height:1">💰</div>
+            <div class="hs-note">大手キャリア<br>月額9,000円比</div>
           </div>
         </div>
       </div>
@@ -274,7 +289,7 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <!-- ── Features ── -->
-<section class="section" id="features">
+<section class="section features-section" id="features">
   <div class="section-w">
     <h2 class="sec-title">この診断ツールの<em>特徴</em></h2>
     <p class="sec-sub">4つの強みで、あなたにピッタリの格安SIMを確実に見つけます</p>
@@ -347,6 +362,7 @@ a{text-decoration:none;color:inherit}
           <div class="rc-carrier">UQ mobile</div>
           <div class="rc-price">¥2,178<small style="font-size:.8rem;font-weight:400;opacity:.85">/月</small></div>
           <div class="rc-tco">2年間TCO：¥52,272</div>
+          <div class="rc-saving">大手比 年間 ¥41,760 節約！</div>
         </div>
         <div class="rc-body">
           <ul class="rc-specs">
@@ -364,7 +380,7 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <!-- ── Comparison Table ── -->
-<section class="section" id="compare">
+<section class="section compare-section" id="compare">
   <div class="section-w">
     <h2 class="sec-title">人気プランをまとめて<em>比較</em></h2>
     <p class="sec-sub">主要格安SIMの料金・サービスを一覧で確認。あなたに合うプランを見つけよう。</p>
@@ -373,10 +389,10 @@ a{text-decoration:none;color:inherit}
         <thead>
           <tr>
             <th>項目</th>
-            <th>Y!mobile<span class="comp-badge">家族割◎</span></th>
-            <th>UQ mobile<span class="comp-badge">速度◎</span></th>
-            <th>BIGLOBE mobile</th>
-            <th>楽天モバイル<span class="comp-badge">最安</span></th>
+            <th class="th-ymobile">Y!mobile<span class="comp-badge">家族割◎</span><span class="th-carrier-sub">ソフトバンク回線</span></th>
+            <th class="th-uq">UQ mobile<span class="comp-badge">速度◎</span><span class="th-carrier-sub">au回線・品質最高</span></th>
+            <th class="th-biglobe">BIGLOBE mobile<span class="th-carrier-sub">au/docomo回線</span></th>
+            <th class="th-rakuten">楽天モバイル<span class="comp-badge">最安</span><span class="th-carrier-sub">楽天自社回線</span></th>
           </tr>
         </thead>
         <tbody>
@@ -414,6 +430,24 @@ a{text-decoration:none;color:inherit}
             <td>両方あり</td>
             <td>オンラインのみ</td>
             <td>両方あり</td>
+          </tr>
+          <tr>
+            <td>通信速度評価</td>
+            <td>⭐⭐⭐⭐☆ <small style="color:#6b7280">良好</small></td>
+            <td><strong style="color:var(--primary)">⭐⭐⭐⭐⭐ 最高</strong></td>
+            <td>⭐⭐⭐☆☆ <small style="color:#6b7280">普通</small></td>
+            <td>⭐⭐⭐⭐☆ <small style="color:#6b7280">良好</small></td>
+          </tr>
+          <tr>
+            <td>乗り換えキャンペーン</td>
+            <td>最大<span class="price-main">10,000円</span>相当</td>
+            <td>最大<span class="price-main">13,000円</span>相当</td>
+            <td>最大<span class="price-main">6,000円</span>相当</td>
+            <td>最大<span class="price-main">14,000pt</span>付与</td>
+          </tr>
+          <tr>
+            <td>2年間節約額（大手比）</td>
+            <td colspan="4" style="text-align:center;background:linear-gradient(90deg,rgba(196,74,0,.07),rgba(255,107,53,.12));font-weight:700;color:#c44a00;font-size:1.02rem">最大 <strong style="font-size:1.25rem">¥83,520</strong> 以上お得！（月額9,000円プランとの比較）</td>
           </tr>
         </tbody>
       </table>
