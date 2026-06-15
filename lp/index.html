@@ -43,7 +43,7 @@ a{text-decoration:none;color:inherit}
 .hero-inner{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:72px 24px 56px;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;width:100%}
 .hero-badge{display:inline-block;background:var(--accent);color:#fff;border-radius:20px;padding:5px 16px;font-size:.78rem;font-weight:700;margin-bottom:14px;letter-spacing:.04em}
 .hero-h1{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:900;line-height:1.2;color:#fff;margin-bottom:14px}
-.hero-h1 em{font-style:normal;color:#FFD700}
+.hero-h1 em{font-style:normal;color:#FFD700;font-size:1.15em;letter-spacing:-.01em}
 .hero-desc{color:rgba(255,255,255,.88);font-size:.98rem;margin-bottom:28px;line-height:1.8;max-width:480px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn-accent{background:var(--accent);color:#fff;border-radius:32px;padding:14px 30px;font-size:1rem;font-weight:800;display:inline-flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(255,107,53,.45);transition:transform .2s,box-shadow .2s}
@@ -147,7 +147,7 @@ a{text-decoration:none;color:inherit}
 .mnp-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
 .mnp-photo{width:100%;height:180px;object-fit:cover}
 .mnp-body{padding:20px 22px}
-.mnp-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;font-size:1rem;font-weight:800;margin-bottom:12px;flex-shrink:0}
+.mnp-num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;font-size:1.3rem;font-weight:800;margin-bottom:12px;flex-shrink:0;box-shadow:0 4px 14px rgba(0,102,204,.38)}
 .mnp-icon{width:36px;height:36px;object-fit:contain;margin-bottom:10px}
 .mnp-card h3{font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:8px}
 .mnp-card p{font-size:.85rem;color:#4b5563;line-height:1.75}
@@ -157,7 +157,9 @@ a{text-decoration:none;color:inherit}
 .story-card{border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.1);background:#fff}
 .story-photo{width:100%;height:200px;object-fit:cover}
 .story-body{padding:20px 22px}
-.story-saving{font-size:1.55rem;font-weight:900;color:#fff;background:linear-gradient(90deg,#c44a00,var(--accent));display:inline-block;padding:7px 18px;border-radius:10px;margin-bottom:14px;box-shadow:0 3px 12px rgba(255,107,53,.38)}
+.story-saving{background:linear-gradient(90deg,#c44a00,var(--accent));display:inline-flex;flex-direction:column;gap:2px;padding:10px 20px;border-radius:10px;margin-bottom:14px;box-shadow:0 3px 12px rgba(255,107,53,.38)}
+.story-saving-num{font-size:2.6rem;font-weight:900;color:#fff;line-height:1.0;display:block;text-shadow:0 2px 8px rgba(0,0,0,.22);letter-spacing:-.02em}
+.story-saving-label{font-size:.76rem;color:rgba(255,255,255,.85);font-weight:500;display:block}
 .story-saving span{font-size:.78rem;color:rgba(255,255,255,.82);font-weight:400}
 .story-text{font-size:.86rem;color:#4b5563;line-height:1.75;margin-bottom:10px;font-style:italic}
 .story-profile{font-size:.76rem;color:#9ca3af}
@@ -192,10 +194,10 @@ a{text-decoration:none;color:inherit}
 .site-footer a:hover{color:#d1d5db}
 
 /* ── Carrier column colors ── */
-.comp-table .th-ymobile{background:#d43f00}
-.comp-table .th-uq{background:#006fba}
-.comp-table .th-biglobe{background:#005bac}
-.comp-table .th-rakuten{background:#bf0000}
+.comp-table .th-ymobile{background:#E87028}
+.comp-table .th-uq{background:#0099CC}
+.comp-table .th-biglobe{background:#0060BB}
+.comp-table .th-rakuten{background:#CC0022}
 /* Section backgrounds */
 .features-section{background:var(--gray)}
 .compare-section{background:#edf7ff}
@@ -203,6 +205,18 @@ a{text-decoration:none;color:inherit}
 .rc-saving{background:linear-gradient(90deg,#c44a00,var(--accent));color:#fff;border-radius:8px;padding:8px 12px;font-size:1rem;font-weight:900;text-align:center;margin-top:10px;box-shadow:0 2px 8px rgba(255,107,53,.32);letter-spacing:.02em}
 /* Carrier label sub */
 .th-carrier-sub{font-size:.7rem;font-weight:400;opacity:.82;display:block;margin-top:2px}
+/* Hero card grid */
+.hc-grid{border-radius:10px;overflow:hidden;border:1px solid #e5e7eb;margin-bottom:12px}
+.hc-grid-head{display:grid;grid-template-columns:1fr 74px 80px;background:#f0f7ff;padding:6px 10px 6px;font-size:.67rem;font-weight:700;color:#6b7280;gap:4px}
+.hc-grid-row{display:grid;grid-template-columns:1fr 74px 80px;padding:8px 10px;gap:4px;border-top:1px solid #f0f4f8;align-items:center}
+.hc-grid-row.best{background:#e8f4fd}
+.hc-carrier{font-weight:700;color:#1a1a2e;font-size:.82rem}
+.hc-carrier small{display:block;font-size:.65rem;color:#9ca3af;font-weight:400}
+.hc-price{text-align:right;font-weight:800;color:var(--primary);font-size:.9rem}
+.hc-price.alt{color:#374151}
+.hc-tco{text-align:right;font-weight:600;font-size:.74rem}
+.hc-tco.best-tco{color:var(--primary)}
+.hc-tco.alt-tco{color:#6b7280}
 </style>
 </head>
 <body>
@@ -242,17 +256,27 @@ a{text-decoration:none;color:inherit}
     <div>
       <div class="hero-card">
         <p class="hc-title">診断例：あなたへのおすすめプラン</p>
-        <div class="plan-row gold">
-          <div class="plan-carrier">🥇 UQ mobile<small>au回線・速度最高評価</small></div>
-          <div class="plan-price"><strong>¥2,178</strong><span>/月（税込）</span></div>
-        </div>
-        <div class="plan-row">
-          <div class="plan-carrier">🥈 Y!mobile<small>家族割あり・店舗サポート</small></div>
-          <div class="plan-price"><strong style="font-size:1rem;color:#374151">¥1,870</strong><span>/月</span></div>
-        </div>
-        <div class="plan-row">
-          <div class="plan-carrier">🥉 BIGLOBE mobile<small>通話割引プランが充実</small></div>
-          <div class="plan-price"><strong style="font-size:1rem;color:#374151">¥1,870</strong><span>/月</span></div>
+        <div class="hc-grid">
+          <div class="hc-grid-head">
+            <div>プラン / 回線</div>
+            <div style="text-align:right">月額</div>
+            <div style="text-align:right">2年TCO</div>
+          </div>
+          <div class="hc-grid-row best">
+            <div class="hc-carrier">🥇 UQ mobile<small>au回線・速度◎</small></div>
+            <div class="hc-price">¥2,178</div>
+            <div class="hc-tco best-tco">¥52,272</div>
+          </div>
+          <div class="hc-grid-row">
+            <div class="hc-carrier">🥈 Y!mobile<small>SB回線・家族割◎</small></div>
+            <div class="hc-price alt">¥2,178</div>
+            <div class="hc-tco alt-tco">¥52,272</div>
+          </div>
+          <div class="hc-grid-row">
+            <div class="hc-carrier">🥉 楽天Mobile<small>楽天回線・最安</small></div>
+            <div class="hc-price alt">¥1,078</div>
+            <div class="hc-tco alt-tco">¥25,872</div>
+          </div>
         </div>
         <div class="hero-saving">
           <div>
@@ -467,8 +491,8 @@ a{text-decoration:none;color:inherit}
 <!-- ── MNP Guide ── -->
 <section class="section mnp-bg" id="mnp">
   <div class="section-w">
-    <h2 class="sec-title">MNP乗り換え<em>完全ガイド</em></h2>
-    <p class="sec-sub">乗り換えはかんたん3ステップ。最短60分で手続き完了！</p>
+    <h2 class="sec-title">乗り換えはかんたん<em>3ステップ</em></h2>
+    <p class="sec-sub">MNP手続きは最短60分で完了！全部オンラインで済みます</p>
     <div class="mnp-steps">
       <div class="mnp-card">
         <img src="../assets/photos/photo_03.jpg" alt="MNP番号取得" class="mnp-photo">
@@ -516,7 +540,7 @@ a{text-decoration:none;color:inherit}
       <div class="story-card">
         <img src="../assets/photos/photo_06.jpg" alt="成功事例・節約体験" class="story-photo">
         <div class="story-body">
-          <div class="story-saving">¥83,520以上 <span>節約（2年間）</span></div>
+          <div class="story-saving"><span class="story-saving-num">¥83,520以上</span><span class="story-saving-label">節約（2年間）</span></div>
           <p class="story-text">「docomoから格安SIMに乗り換えたら月額が9,000円→2,178円に！ 毎月の節約が体感できて本当によかった。手続きも思ったより簡単でした。」</p>
           <p class="story-profile">30代 会社員 / ドコモ → UQ mobile</p>
           <div class="story-thumbs">
@@ -529,7 +553,7 @@ a{text-decoration:none;color:inherit}
       <div class="story-card">
         <img src="../assets/photos/photo_02.jpg" alt="成功事例・家族で節約" class="story-photo">
         <div class="story-body">
-          <div class="story-saving">¥54,000 <span>節約（2年間）</span></div>
+          <div class="story-saving"><span class="story-saving-num">¥64,000以上</span><span class="story-saving-label">節約（2年間）</span></div>
           <p class="story-text">「家族3人でワイモバイルに乗り換え。家族割で1人あたり1,078円になり、固定費が大幅に下がりました。通信速度も大手キャリアと変わらず快適です。」</p>
           <p class="story-profile">40代 主婦 / au → Y!mobile</p>
           <div class="story-thumbs">
@@ -542,9 +566,9 @@ a{text-decoration:none;color:inherit}
       <div class="story-card">
         <img src="../assets/photos/photo_07.jpg" alt="成功事例・シニアの節約" class="story-photo">
         <div class="story-body">
-          <div class="story-saving">¥36,000 <span>節約（2年間）</span></div>
-          <p class="story-text">「格安SIMは難しそうと思っていましたが、診断ツールで最適なプランを教えてもらいオンラインで簡単に乗り換えできました。毎月1,500円の節約です。」</p>
-          <p class="story-profile">60代 自営業 / SoftBank → 楽天モバイル</p>
+          <div class="story-saving"><span class="story-saving-num">¥90,000以上</span><span class="story-saving-label">節約（2年間）</span></div>
+          <p class="story-text">「家族4人分をまとめて乗り換えました。診断ツールで最適なプランを教えてもらいオンラインで完結。毎月¥3,750相当の節約です。」</p>
+          <p class="story-profile">50代 主婦 / SoftBank → Y!mobile（家族割）</p>
           <div class="story-thumbs">
             <img src="../assets/photos/photo_08.jpg" alt="">
             <img src="../assets/photos/photo_09.jpg" alt="">
